@@ -1,0 +1,79 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 20rem;
+  height: 30rem;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img {
+  width: 20rem;
+  height: 15rem;
+}
+
+.content {
+  padding: 10px;
+}
+
+.article {
+  padding-top: 1rem;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  visibility: hidden;
+  transition: 0.74s ease-in-out;
+}
+
+.popup-inner {
+  position: relative;
+  bottom: -100vw;
+  right: -100vh;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  max-height: 599px;
+  padding: 5rem;
+  background-color: white;
+  transform: rotate(32deg);
+  transition: 0.74s ease-in-out;
+}
+
+.popup-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup:target .popup-inner {
+  bottom: 0;
+  right: 0;
+  transform: rotate(0);
+}
+
+.detail {
+  text-align: justify;
+}
